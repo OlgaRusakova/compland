@@ -1,0 +1,226 @@
+.header {
+  padding: 38px 80px;
+  display: flex;
+  align-items: center;
+  color: var(--main-text-color);
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 4;
+
+  @include breakpoint(lg) {
+  padding: 20px 30px;
+  }
+}
+
+.header {
+    &_has-bg {
+      background-color: var(--bg-primary);
+      color: var(--txt-black);
+      transition: 0.04s;
+      .header__burger-img path{
+        fill: var(--bg-secondary);        
+      }
+      .header__login-btn {
+        @include breakpoint(lg) {
+          background: var(--bg-secondary);
+          color: var(--main-text-color);
+          border-color: var(--main-text-color);
+          font-weight: bold;
+        &:hover {
+          background: green;
+          transition: 0.6s;
+        }
+      }
+    }}
+
+		&__menu-wrap {
+      padding-left: 300px;
+      @include breakpoint(xxl) {
+      padding-left: 200px;
+      };
+      @include breakpoint(xl) {
+      padding-left: 0;
+      }
+      @include breakpoint(lg) {
+      display: none;
+      }
+		}
+
+		&__navigation {
+		}
+
+		&__menu {display: flex;
+      padding: 0;
+      margin: 0;
+      @include breakpoint(lg) {
+      flex-direction: column;
+      align-items: center;
+      background-color: var(--bg-primary);
+      }
+		}
+    &__menu-scrolled {
+      @include breakpoint(lg) {
+        background-color: var(--bg-primary);
+        transition: 0.4s;
+      }
+      }
+    
+    &__menu-wrap_visible {
+      @include breakpoint(lg) {
+      display: block;
+      position: absolute;
+      top: 100%; 
+      left: 0%;
+      background-color: var(--bg-primary);
+      width: 100%;
+      transition: 0.4s;
+      color: var(--txt-black);
+    }
+  }
+
+		.menu-item {
+      padding: 15px 28px 15px 28px;
+      color: currentColor;
+      list-style: none;
+      font-size: 16px;
+      position: relative;
+
+      &:hover {background: var(--bg-primary);
+        &>a {
+        color: var(--txt-black);
+        }}
+      @include breakpoint(lg) {
+        &:hover {background: var(--bg-secondary);
+        &>a {
+        color: var(--main-text-color);
+      }}}
+
+      &>a {
+        text-decoration: none;
+        color: currentColor;
+        position: relative;
+      }
+      @include breakpoint(lg) {
+      padding: 15px 28px;
+      }
+		}
+    
+
+		&__menu-link {
+      text-decoration: none;
+      color: currentColor;
+		}
+    
+    
+    .menu-item-has-children {
+      &::after {
+      content: "";
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-left: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
+      margin-left: 5px;
+      transform: translateY(-1px) rotate(-45deg);
+      vertical-align: middle;}
+
+      &:hover::after {
+        content: "";
+        transform: translateY(-1px) rotate(180deg);
+        border-left: 1px solid var(--txt-black);
+        border-bottom: 1px solid var(--txt-black);
+        transition: 0.04s;
+        @include breakpoint(lg) {
+          border-left: 1px solid var(--main-text-color);
+          border-bottom: 1px solid var(--main-text-color);
+        
+        }
+      }
+        
+      &:hover {
+        /* background: var(--bg-primary);
+        a {
+          background: var(--bg-primary);
+          color: var(--txt-black);}
+  
+          @include breakpoint(md) {
+            background: transparent;
+          } */
+        &::after {
+            content: "";
+            transform: translateY(-1px) rotate(135deg);
+            border-left: 1px solid var(--txt-black);
+            border-bottom: 1px solid var(--txt-black);
+            transition: 0.04s;}
+
+  
+        .sub-menu {
+          opacity: 1;
+          visibility: visible;
+          transform: translate(0, 0);
+        }
+        .menu-item {
+          padding-left: 5px;
+          padding-right: 0;
+
+          &:hover {
+            background: var(--txt-black);
+          &>a {
+            height: 100%;
+            background-color: var(--txt-black);
+            color: var(--main-text-color);
+            @include breakpoint(lg) {
+            color: var(--main-text-color);
+            background-color: var(--bg-secondary);
+            }
+          }
+          }
+        }
+    }}
+
+    .sub-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 150px;
+      background: var(--bg-primary);
+      opacity: 0;
+      visibility: hidden;
+      transform: translate(0,-20px);
+      transition: .3s;
+      padding-left: 0;
+      color: var(--txt-black);
+
+      @include breakpoint(lg) {
+      top: 0;
+      left: 100%;
+      background-color: var(--bg-primary);
+      flex-direction: row;
+      }
+    }
+
+		&__login-btn {background: linear-gradient(94.26deg, #C89AFC 9.51%, #7C6AFA 90.23%);
+      border: none;
+      
+      &:hover {
+        background: green;
+        transition: 0.6s;
+      }
+      @include breakpoint(lg) {
+      background: var(--bg-primary);
+      color: var(--txt-black);
+      border-color: var(--txt-black);
+      font-weight: bold;
+      }
+		}
+    &__burger {
+      display: none;
+      @include breakpoint(lg) {
+      display: block;
+      }
+    }
+}
+

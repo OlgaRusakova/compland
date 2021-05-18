@@ -1,0 +1,15 @@
+*,
+*::after,
+*::before {
+box-sizing: border-box;
+}
+
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-image: url(../img/body-background/bgc.png);
+    height: 2000px;
+}
