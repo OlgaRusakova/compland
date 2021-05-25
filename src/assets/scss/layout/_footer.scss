@@ -30,6 +30,7 @@
   }
 
   &__button-inner {display: flex;
+   /*  flex-wrap: wrap; */
     max-width: 492px;
     width: 100%;
   }
@@ -38,7 +39,7 @@
     background: var(--bg-primary);
     opacity: 0.25;
     border-radius: 50px 0px 0px 50px;
-    width: 75%;
+    width: 70%;
     padding-top: 5px;
     padding-left: 20px;
     padding-bottom: 5px;
@@ -51,7 +52,7 @@
 
   &__discribe-btb {
     position: relative;
-    left: -3%;
+    left: -5%;
     z-index: 3;
     font-weight: bold;
     font-size: 16px;
@@ -62,6 +63,7 @@
     border-radius: 50px;
     border: none;
     width: 30%;
+    min-width: 145px;
   }
 
   &__icons-inner {
