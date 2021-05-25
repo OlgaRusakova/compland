@@ -1,0 +1,66 @@
+
+.partners {
+padding-bottom: 200px;
+
+
+    &__title {
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 140%;
+        color: var(--txt-gray);
+        margin: 30px 0 90px 0 ;
+        padding-left: 147px;
+        position: relative;
+
+        @include breakpoint(lg) {
+            padding-left: 90px;
+        }
+        @include breakpoint(sm) {
+            font-size: 34px;
+        
+        }
+
+        &::before {
+            content: '';
+            width: 127px;
+            height: 127px;
+            background-image: url(../img/partners/icon-heading.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: absolute;
+            top: -40%;
+            left: 0%;
+            @include breakpoint(lg) {
+                width: 90px;
+                height: 90px;
+                top: -20%;
+            }
+            @include breakpoint(sm) {
+            width: 70px;
+            height: 70px;
+            }
+            @media (max-width: 400px) {
+            top: 0;
+                
+            }
+        }
+    }
+
+
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__brand {
+    }
+
+    &__card {
+        display: flex;
+        justify-content: center;
+        /* @include col ();
+        @include size (1/4); */
+        padding: 28px 54px;
+        
+    }
+}

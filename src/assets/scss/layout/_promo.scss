@@ -1,0 +1,181 @@
+.promo {
+    background-image: url(../img/promo/main-screen.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding-top: 270px;
+
+    @include breakpoint(md) {
+    padding-top: 150px;
+    }
+
+    &__title {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 64px;
+        line-height: 140%;
+        color: var(--main-text-color);
+        max-width: 920px;
+        margin-top: 0;
+        margin-right: 0;
+        margin-bottom: 25px;
+
+        @include breakpoint(md) {
+        font-size: 50px;
+        }
+
+        @include breakpoint(sm) {
+            font-size: 35px;
+        }
+    }
+
+    &__time-counter {
+        margin-top: 50px;
+        margin-bottom: 218px;
+
+        @include breakpoint(md) {
+        margin-bottom: 100px;
+        }
+    }
+
+    &__counter {
+        background: var(--bg-gray);
+    }
+
+    &__counters-wrap {
+        @include row();
+        display: flex;
+        align-items: center;
+    }
+
+    &__button {
+        @include col();
+        @include size (2/12);
+
+        @include breakpoint(lg) {
+        @include size (1/2);
+        }
+        @include breakpoint(md) {
+        @include size (1/1);
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        }
+    }
+
+
+    &__order-btn {
+        border: 0px;
+        background: linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%);
+        
+        &:hover { 
+            background: green;
+            transition: 0.6s;
+        }
+    }
+
+    &__people-counter {
+        @include col();
+        @include size (3/12);
+        margin: 36px 0;
+        padding: 0px 20px;
+
+        @include breakpoint(lg) {
+        @include size (1/2);
+        }
+        @include breakpoint(md) {
+            @include size (1/1);
+        }
+    }
+
+    &__students-number {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 10px;
+        
+    }
+
+    &__students-number_bottom {
+        align-items: flex-start;
+        margin-bottom: 0px;
+        margin-top: 10px;
+    }
+
+    &__students-number-text {
+        font-size: 16px;
+        line-height: 150%;
+        color: var(--txt-gray);
+        opacity: 0.4;
+        margin: 0;
+    }
+
+    &__number {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 150%;
+        color: var(--txt-gray);
+        margin: 0;
+    }
+
+    &__money-counter {
+        display: flex;
+        @include col();
+        @include size (7/12);
+        flex-direction: column;
+        padding-left: 20px;
+
+        @include breakpoint(lg) {
+        @include size (1/1);
+        }
+    }
+
+    &__earned-money {
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 2px;
+        
+    }
+
+    &__earned-money-text {
+        font-size: 16px;
+        line-height: 150%;
+        color: var(--txt-gray);
+        opacity: 0.4;
+        margin: 0px;
+    }
+
+    &__earned-money-mount {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 150%;
+        color: var(--txt-gray);
+        padding-left: 30px;
+        margin: 0px;
+    }
+
+    &__money-line {
+        width: 100%;
+        height: 6px;
+        background: var(--bg-primary);
+    }
+
+    &__money-line_filled {
+        width: 61.5%;
+        background: var(--bg-gradient);
+    }
+
+    &__minmax-money {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__minmax {
+        font-size: 16px;
+        line-height: 150%;
+        color: var(--txt-gray);
+        opacity: 0.4;
+        margin-top: 5px;
+        margin-bottom: 0px;
+    }
+}
