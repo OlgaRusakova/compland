@@ -1,0 +1,96 @@
+
+
+.teachers {
+    padding-bottom: 210px;
+
+		&__title {
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 140%;
+        color: var(--txt-gray);
+        margin: 30px 0 90px 0 ;
+        padding-left: 147px;
+        position: relative;
+
+        @include breakpoint(lg) {
+            padding-left: 90px;
+        }
+        @include breakpoint(sm) {
+            font-size: 34px;
+        
+        }
+
+        &::before {
+            content: '';
+            width: 127px;
+            height: 127px;
+            background-image: url(../img/teachers/icon-heading.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: absolute;
+            top: -40%;
+            left: 0%;
+            @include breakpoint(lg) {
+                width: 90px;
+                height: 90px;
+                top: -15%;
+            }
+            @include breakpoint(sm) {
+            width: 70px;
+            height: 70px;
+            }
+            @media (max-width: 400px) {
+            top: 0;
+                
+            }
+        }
+    }
+
+		&__card {
+		display: flex;
+        flex-direction: column;
+        align-items: center;
+        }
+
+
+
+		&__photo {
+            max-width: 190px;
+		}
+
+		&__name {
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 140%;
+            text-align: center;
+            color: var(--txt-gray);
+            margin: 40px 0 15px 0;
+
+		}
+
+		&__text {
+            font-size: 16px;
+            line-height: 160%;
+            text-align: center;
+            color: var(--txt-gray);
+            opacity: 0.8;
+            margin: 0 0 40px 0;
+		}
+
+		&__biografy-btn {
+            margin: 0;
+            max-width: 143px;
+            border: 1px solid var(--txt-gray);
+            background: none;
+            color: var(--txt-gray);
+            padding: 10px 30px;
+            margin-bottom: 30px;
+            cursor: pointer;
+
+            &:hover {
+                background: var(--bg-primary);
+                color: var(--txt-black);
+                border: none;
+            }
+		}
+}

@@ -1,0 +1,48 @@
+.about {
+    padding: 200px 0;
+    @include breakpoint(lg) {
+        padding: 100px 0;
+    }
+
+    &__img-wrap {
+    @include col();
+    @include size(5/12);
+
+    @include breakpoint(lg) {
+    @include size(1/1);
+    justify-self: center
+    }
+    }
+
+    &__img {
+        @include breakpoint(sm) {
+            width: 100%;
+        }
+        
+    }
+
+    &__description {
+    @include col();
+    @include size(7/12);
+    padding-left: 95px;
+    @include breakpoint(lg) {
+    @include size(1/1);
+    padding-left: 0;
+    }
+    }
+
+    &__title {
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 140%;
+    color: var(--txt-gray);
+    margin: 69px 0 45px 0;
+    }
+
+    &__text {font-size: 16px;
+        line-height: 160%;
+        color: var(--txt-gray);
+        margin: 0;
+    }
+}
+

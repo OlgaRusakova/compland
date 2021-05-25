@@ -1,0 +1,112 @@
+.start {
+
+    padding-bottom: 200px;
+
+    &__title {
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 140%;
+        color: var(--txt-gray);
+        margin: 0;
+        padding-left: 147px;
+        position: relative;
+
+        @include breakpoint(lg) {
+            padding-left: 90px;
+        }
+        @include breakpoint(sm) {
+            font-size: 34px;
+        
+        }
+
+        &::before {
+            content: '';
+            width: 127px;
+            height: 127px;
+            background-image: url(../img/start/icon-heading.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: absolute;
+            top: -40%;
+            left: 0%;
+            @include breakpoint(lg) {
+                width: 90px;
+                height: 90px;
+                top: -20%;
+            }
+            @include breakpoint(sm) {
+            width: 70px;
+            height: 70px;
+            }
+            @media (max-width: 400px) {
+            top: 0;
+                
+            }
+        }
+    }
+
+    &__text {
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--txt-gray);
+    opacity: 0.5;
+    margin: 50px 0 80px 0;
+    max-width: 411px;
+    }
+
+    &__infografic {
+        display: flex;
+        @include breakpoint(lg) {
+        flex-direction: column;
+        }
+    }
+
+    &__sector {
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 25%;
+        justify-content: space-between;
+        @include breakpoint(lg) {
+        flex-direction: row;
+        width: 100%;
+        overflow: hidden;
+        }
+    }
+
+    &__prc {
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 140%;
+        color: var(--txt-gray);
+        margin: 0 0 20px 0;
+        align-self: flex-start;
+        @include breakpoint(lg) {
+        width: 10%;
+        }
+    }
+
+    &__infografic-img {
+        width: 100%;
+        @include breakpoint(lg) {
+        min-width: 205px;
+        max-height: 50px;
+        width: 50%;
+        transform: rotate(90deg);
+        }
+    }
+
+    &__infografic-text {font-size: 14px;
+        line-height: 160%;
+        color: var(--txt-gray);
+        opacity: 0.5;
+        margin: 35px 0 0 0;
+
+        @include breakpoint(lg) {
+        margin: 0 0 20px 0;
+        width: 40%;
+        }
+    }
+}
+

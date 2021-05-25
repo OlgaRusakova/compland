@@ -1,0 +1,62 @@
+.advantages {
+    padding-bottom: 200px;
+
+    &__title {
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 140%;
+        text-align: center;
+        color: var(--txt-gray);
+        margin-bottom: 120px;
+    }
+
+    &__row  {
+        justify-content: center;
+    }
+
+    &__card {
+        @include col ();
+        @include size (1/3);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        @include breakpoint(lg) {
+        @include size (1/2);
+        margin-bottom: 20px;
+        }
+        @include breakpoint(md) {
+            @include size (1/1);
+        }
+    }
+
+    &__card-img {
+        margin-bottom: 60px;
+    }
+
+    &__card-name {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 140%;
+        text-align: center;
+        color: #FFFFFF;
+        margin-bottom: 30px;
+        margin-top: 0px;
+    }
+
+    &__card-text {
+        font-size: 16px;
+        line-height: 160%;
+        text-align: center;
+        color: #FFFFFF;
+        opacity: 0.8;
+        padding: 0 20px;
+        margin: 0;
+
+        @include breakpoint(md) {
+        max-width: 520px;
+        }
+    }
+}
+

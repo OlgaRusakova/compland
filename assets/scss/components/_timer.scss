@@ -1,0 +1,56 @@
+.countdown {
+    @include breakpoint(sm) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    }
+}
+
+.countdown-number {
+    margin-right: 30px;
+    padding: 20px 30px;
+    border-radius: 3px;
+    background: var(--bg-gray);
+    display: inline-block;
+
+    &:last-child {
+        margin-right: 0;
+        @include breakpoint(sm) {
+        margin-right: 20px;
+        }
+    }
+
+    @include breakpoint(sm) {
+    margin: 20px;
+    width: 25%;
+    }
+
+    @media (max-width: 510px) {
+        width: 40%;
+    }
+}
+
+.countdown-time {
+    text-align: center;
+    display: block;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 140%;
+    color: var(--main-text-color);
+    flex-grow: 0;
+    margin: 0px 0px;
+
+    @include breakpoint(sm) {
+    font-size: 24px;
+    }
+}
+
+.countdown-text {
+    text-align: center;
+    display: block;
+    font-size: 16px;
+    line-height: 140%;
+    text-align: center;
+    color: var(--main-text-color);
+    opacity: 0.4;
+}
