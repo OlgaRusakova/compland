@@ -64,11 +64,17 @@
     border: none;
     width: 30%;
     min-width: 145px;
+    cursor: pointer;
+
+    &:hover {
+      background: green;
+    }
   }
 
   &__icons-inner {
     margin-top: 40px;
     margin-bottom: 50px;
+    cursor: pointer;
   }
 
   &__rights {
